@@ -1,0 +1,94 @@
+html{
+    display:flex;
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../images/KidBackground.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#wrapper {
+    display:flex;
+}
+#componentsarea img {
+    max-width: 250px;
+    max-height: 250px;
+    display:block;
+    position: relative;
+    padding: 10px;
+}
+.selected {
+    border:red solid 2px;
+}
+#message {
+    padding:20vw;
+}
+#box, #triangle {
+    display:flex;
+}
+#triangle {
+    height: 90px;
+    width: 50%;
+}
+#Gate{
+    height: 60px;
+    width: 10%;
+}
+#Window{
+    height: 20px;
+    width: 5%;
+}
+#flag{
+    height: 30px;
+    width: 5%;
+}
+#buttons{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px;
+    padding: 10px;
+}
+#up{
+    grid-column: 2;
+    grid-row: 1;
+}
+#down{
+    grid-column: 2;
+    grid-row: 3;
+}
+#left{
+    grid-column: 1;
+    grid-row: 2;
+}
+#right{
+    grid-column: 3;
+    grid-row: 2;
+}
+#reset{
+    grid-column: 2;
+    grid-row: 2;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  
+  .left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+  
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+  
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }

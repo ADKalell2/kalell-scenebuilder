@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build A Castle</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet">
+</head>
+<body>
+        <div id="wrapper">
+            <div id="componentsarea">
+                <div id="box">
+                    <img id="Tower" src="images/Tower.png">
+                    <img id="Tower" src="images/Tower.png">
+                    <img id="Tower" src="images/Tower.png">
+                </div>
+                <div id="box">
+                    <img id="flag" src="images/flag.png">
+                    <img id="flag" src="images/flag.png">
+                    <img id="flag" src="images/flag.png">
+                </div>
+                <div id="triangle">
+                    <img id="Roof" src="images/Roof.png">
+                    <img id="Roof" src="images/Roof.png">
+                    <img id="Roof" src="images/Roof.png">
+                </div>
+                <div id="box">
+                    <img id="Window" src="images/Window.png">
+                    <img id="Window" src="images/Window.png">
+                    <img id="Window" src="images/Window.png">
+                </div>
+                <img id="Wall" src="images/Wall.png">
+                <img id="Gate" src="images/Gate.png">
+                <div id="buttons">
+                    <button id="up"><i class="arrow up"></i></button>
+                    <button id="down"><i class="arrow down"></i></button>
+                    <button id="left"><i class="arrow left"></i></button>
+                    <button id="right"><i class="arrow right"></i></button>
+                    <button id="reset">Reset</button>
+                    <button id="done">Done</button>
+                </div>
+            </div>
+            <div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){                
+                var selectedcomponent;                    
+                  $("#componentsarea img").click(function(){
+                      selectedcomponent = this;
+                      $( "#componentsarea img" ).removeClass( "selected" );
+                      $( selectedcomponent ).addClass( "selected" );                      
+                  });
+                  $("#right").click(function(){
+                  $(selectedcomponent).animate({ left: '+=30px'});
+                    });
+                  $("#left").click(function(){
+                  $(selectedcomponent).animate({ left: '-=30px'});
+                    });
+                  $("#up").click(function(){
+                  $(selectedcomponent).animate({ top: '-=30px'});
+                    });
+                  $("#down").click(function(){
+                  $(selectedcomponent).animate({ top: '+=30px'});
+                    });                                           
+                  $("#reset").click(function(){
+                  $("#componentsarea img").animate({ top: '0', left: '0'});
+                  })
+                  $("#done").click(function(){
+                  $( "#componentsarea img" ).removeClass( "selected" );
+                  })                                              
+            });
+            
+        </script>
+</body>
+</html>
