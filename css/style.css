@@ -5,6 +5,7 @@ html{
     background-image: url(../images/KidBackground.png);
     background-repeat: no-repeat;
     background-size: contain;
+    overflow-x: hidden;
 }
 #wrapper {
     display:flex;
@@ -91,4 +92,25 @@ html{
   .down {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
+  }
+
+/*---------------------------mediasizes-------------------*/
+@media only screen and (max-width: 1366px){
+    html{
+        display:flex;
+        width: 1536px;
+        height: 940px;
+        background-image: url(../images/KidBackground.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow-x: hidden;
+    }
+
+    #componentsarea img {
+        max-width: 250px;
+        max-height: 250px;
+        display:block;
+        position: relative;
+        padding: 10px;
+    }
   }
